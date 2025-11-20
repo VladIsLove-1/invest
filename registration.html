@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Регистрация — Invest</title>
+  <style>
+    :root{
+      --bg: #efefef;
+      --card: #ffffff;
+      --muted: #9e9e9e;
+      --text: #333;
+      --accent: #3b3b3b;
+      --radius: 14px;
+      --shadow: 0 16px 40px rgba(0,0,0,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      min-height:100vh;
+      background:linear-gradient(135deg,#f3f3f3,#e3e3e3);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:var(--text);
+    }
+
+    .auth-shell{
+      width:100%;
+      max-width:420px;
+      padding:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:26px 24px 24px;
+      box-shadow:var(--shadow);
+    }
+
+    .logo{
+      font-weight:800;
+      font-size:18px;
+      letter-spacing:0.08em;
+      text-transform:uppercase;
+      color:var(--accent);
+      margin-bottom:12px;
+    }
+
+    h1{
+      margin:0 0 6px;
+      font-size:24px;
+      font-weight:700;
+      color:var(--accent);
+    }
+    .subtitle{
+      margin:0 0 18px;
+      font-size:14px;
+      color:var(--muted);
+    }
+
+    label{
+      display:block;
+      font-size:14px;
+      margin-bottom:6px;
+      color:var(--text);
+    }
+
+    .field{
+      margin-bottom:14px;
+    }
+
+    input{
+      width:100%;
+      padding:11px 12px;
+      border-radius:10px;
+      border:1px solid #d3d3d3;
+      font-size:14px;
+      outline:none;
+      background:#fafafa;
+      transition:border-color .15s, background .15s, box-shadow .15s;
+    }
+
+    input:focus{
+      border-color:#b0b0b0;
+      background:#fff;
+      box-shadow:0 0 0 1px rgba(0,0,0,0.04);
+    }
+
+    button{
+      width:100%;
+      border:none;
+      border-radius:10px;
+      padding:11px 14px;
+      margin-top:4px;
+      background:var(--accent);
+      color:#fff;
+      font-weight:600;
+      font-size:15px;
+      cursor:pointer;
+      box-shadow:0 10px 24px rgba(0,0,0,0.18);
+      transition:transform .08s ease, box-shadow .08s ease, opacity .15s;
+    }
+    button:hover{
+      opacity:0.95;
+      transform:translateY(-1px);
+      box-shadow:0 14px 32px rgba(0,0,0,0.22);
+    }
+    button:active{
+      transform:translateY(0);
+      box-shadow:0 6px 14px rgba(0,0,0,0.16);
+    }
+
+    .bottom-text{
+      margin-top:14px;
+      text-align:center;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .bottom-text a{
+      color:var(--accent);
+      text-decoration:none;
+      font-weight:600;
+    }
+    .bottom-text a:hover{
+      text-decoration:underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="card">
+      <div class="logo">INVEST</div>
+      <h1>Создать аккаунт</h1>
+      <p class="subtitle">Регистрируйтесь, чтобы открывать депозиты и управлять балансом.</p>
+
+      <form action="register.php" method="POST">
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="field">
+          <label for="password">Пароль</label>
+          <input id="password" type="password" name="password" placeholder="Минимум 6 символов" required>
+        </div>
+
+        <div class="field">
+          <label for="password2">Повторите пароль</label>
+          <input id="password2" type="password" name="password2" placeholder="Ещё раз пароль" required>
+        </div>
+
+        <button type="submit">Создать аккаунт</button>
+      </form>
+
+      <div class="bottom-text">
+        Уже есть аккаунт? <a href="login.html">Войти</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
